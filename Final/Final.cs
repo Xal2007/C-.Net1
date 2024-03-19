@@ -382,13 +382,13 @@ bool CheckAnswer(string question, string userAnswer)
 
 void UpdateQuizResults(string category, int score)
 {
-    if (!quizResults[currentUser].ContainsKey(category))
+    if (quizResults[currentUser].ContainsKey(category))
     {
-        quizResults[currentUser].Add(category, score);
+        quizResults[currentUser][category] = score;
     }
     else
     {
-        quizResults[currentUser][category] = score;
+        quizResults[currentUser].Add(category, score);
     }
     SaveResultsToFile();
 }
