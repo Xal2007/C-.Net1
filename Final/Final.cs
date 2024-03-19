@@ -21,7 +21,8 @@ string choice = Console.ReadLine()!;
 
  if (choice == "1" || choice == "2")
  {
-  LoadUsersFromFile();
+   if (File.Exists("users.json"))
+   {LoadUsersFromFile(); }
  }
 
  switch (choice)
@@ -100,8 +101,9 @@ string choice = Console.ReadLine()!;
 
   void ShowMainMenu()
   {
-      //LoadResultsFromFile();
-      Console.Clear();
+    if (File.Exists("results.json")) LoadResultsFromFile();
+    
+    Console.Clear();
       
       Console.WriteLine("                     ---------------------------------- Main menu ----------------------------------");
       Console.WriteLine("1. Start new quiz");
