@@ -100,7 +100,7 @@ string choice = Console.ReadLine()!;
 
   void ShowMainMenu()
   {
-      LoadResultsFromFile();
+      //LoadResultsFromFile();
       Console.Clear();
       
       Console.WriteLine("                     ---------------------------------- Main menu ----------------------------------");
