@@ -4,10 +4,10 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Net.Http.Json;
 
-Dictionary<string, string> users = new Dictionary<string, string>(); // Логины и пароли пользователей
-string? currentUser = null; // Текущий пользователь
-Dictionary<string, List<string>> quizzes = new Dictionary<string, List<string>>(); // Викторины
-Dictionary<string, Dictionary<string, int>> quizResults = new Dictionary<string, Dictionary<string, int>>(); // Результаты викторин
+Dictionary<string, string> users = new Dictionary<string, string>(); 
+string? currentUser = null; 
+Dictionary<string, List<string>> quizzes = new Dictionary<string, List<string>>(); 
+Dictionary<string, Dictionary<string, int>> quizResults = new Dictionary<string, Dictionary<string, int>>();
 
 bool isRunning = true;
 while (isRunning)
